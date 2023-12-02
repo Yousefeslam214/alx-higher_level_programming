@@ -1,4 +1,3 @@
 #!/usr/bin/python3
-for letter in range(0, 99):
-    hex_num = hex(letter)
-    print(f"{letter} = {hex_num}")
+for num in range(0, 99):
+    print('{} = 0x{:x}'.format(num, num))
