@@ -2,10 +2,7 @@
 def print_matrix_integer(matrix=[[]]):
     if matrix is None:
         return None
-    for row in range(len(matrix)):
-        for column in range(len(matrix[row])):
-            if column == matrix[row][-1]:
-                print("{:d}".format(matrix[row][column]), end="")
-            else:
-                print("{:d}".format(matrix[row][column]), end=" ")
+    for row in matrix:
+        for column in row:
+            print("{:d}".format(column), end=" " if column != row[-1] else "")
         print()
