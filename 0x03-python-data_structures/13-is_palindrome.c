@@ -11,8 +11,8 @@ int is_palindrome(listint_t **head)
 {
 	int *arr, len = 0, i = 0, j;
 	listint_t *current;
-	current = *head;
 
+	current = *head;
 	while (current)
 	{
 		current = current->next;
