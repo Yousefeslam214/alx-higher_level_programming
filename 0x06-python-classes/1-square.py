@@ -5,10 +5,8 @@
 
 class Square:
     """represent"""
-    
     def __init__(self, size):
         """inti
-        
         Args:
             size: size
         """
