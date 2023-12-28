@@ -34,8 +34,7 @@ class Square:
         return self.__size * self.__size
 
     def my_print(self):
-        i = 0
-        j = 0
+        """prints in stdout the square with the character #"""
         for i in range(self.__size):
             for j in range(self.__size):
                 print("#", end="")
