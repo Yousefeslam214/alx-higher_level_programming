@@ -16,6 +16,9 @@ class BaseGeometry():
             raise ValueError("{} must be greater than 0".format(name))
 
 
+"""BaseGeometry class Module"""
+
+
 class BaseGeometry():
     """BaseGeometry class"""
     def area(self):
