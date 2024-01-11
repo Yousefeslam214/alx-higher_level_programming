@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""script that adds all arguments to a Python list"""
+"""
+ save items to a file.
+"""
 
 import sys
 import os.path
