@@ -94,7 +94,7 @@ class Rectangle (Base):
                                                        self.x, self.y,
                                                        self.width, self.height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """update information"""
         if args and len(args) != 0:
             a = 0
@@ -113,3 +113,18 @@ class Rectangle (Base):
                 elif a == 4:
                     self.y = arg
                 a += 1
+        elif kwargs and len(kwargs) != 0:
+            for k, w in kwargs.items():
+                if k == "id":
+                    if w is None:
+                        self.__init__(self.width, self.height, self.x, self.y)
+                    else:
+                        self.id = w
+                elif k == "width":
+                    self.width = w
+                elif k == "height":
+                    self.height = w
+                elif k == "x":
+                    self.x = w
+                elif k == "y":
+                    self.y = w
