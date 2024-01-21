@@ -26,7 +26,6 @@ class Square(Rectangle):
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
 
-
     def update(self, *args, **kwargs):
         """Update the Square.
         Args:
@@ -66,7 +65,6 @@ class Square(Rectangle):
                     self.x = v
                 elif k == "y":
                     self.y = v
-
 
     def to_dictionary(self):
         """Return the dictionary representation of the Square."""
