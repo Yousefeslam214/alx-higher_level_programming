@@ -1,9 +1,11 @@
 #!/usr/bin/python3
 """ base """
 
+
 class Base:
     """Base class"""
     __nb_objects = 0
+
     def __init__(self, id=None):
         """fun to init information"""
         if id is not None:
