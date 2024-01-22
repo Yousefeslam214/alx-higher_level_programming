@@ -3,6 +3,7 @@
 
 import json
 
+
 class Base:
     """Base class"""
     __nb_objects = 0
@@ -47,7 +48,7 @@ class Base:
         """fun"""
         if dictionary or dictionary != "{}":
             if cls.__name__ == "Rectangle":
-                new = cls(1,1)
+                new = cls(1, 1)
             else:
                 new = cls(1)
             new.update(**dictionary)
