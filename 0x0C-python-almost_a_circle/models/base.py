@@ -33,3 +33,11 @@ class Base:
             else:
                 list_dicts = [o.to_dictionary() for o in list_objs]
                 jsonfile.write(Base.to_json_string(list_dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """fun"""
+        if json_string is None or json_string == "[]":
+            return "[]"
+        else:
+            return json.loads(json_string)
