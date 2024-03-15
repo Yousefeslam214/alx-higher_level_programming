@@ -9,6 +9,6 @@ mydb = mysql.connector.connect(
     database="hbtn_0e_0_usa"
 )
 mycursor = mydb.cursor()
-mycursor.execute(" SELECT * FROM states; ")
+mycursor.execute(" SELECT * FROM states order by  states.id ; ")
 for i in mycursor:
     print(i)
