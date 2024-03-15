@@ -13,9 +13,9 @@ if __name__ == '__main__':
     c = db.cursor()
     c.execute("SELECT * \
                 FROM `states` \
-                WHERE BINARY `name` = '{}'\
-                    ORDER BY id ASC".format(sys.argv[4]))
+                    ORDER BY id ASC")
     for states in c.fetchall():
-        print(states)
+        if states[1] == sys.argv[4]:
+            print(states)
     c.close()
     db.close()
