@@ -11,8 +11,10 @@ if __name__ == '__main__':
     """
     db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
-    c.execute("SELECT * FROM states \
-                where name = (sys.argv[4]) ORDER BY id ASC")
+    c.execute("SELECT * \
+                 FROM `states` \
+                WHERE BINARY `name` = '{}'\
+                    ORDER BY id ASC".format(sys.argv[4]))
     for states in c.fetchall():
         if states[1] == sys.argv[4]:
             print(states)
