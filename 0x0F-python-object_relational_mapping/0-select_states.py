@@ -17,6 +17,6 @@ if __name__ == '__main__':
         database="hbtn_0e_0_usa"
     )
     mycursor = mydb.cursor()
-    mycursor.execute(" SELECT * FROM states order by  states.id ; ")
+    mycursor.execute("SELECT * FROM states ORDER BY id ASC")
     for states in mycursor.fetchall():
         print(states)
