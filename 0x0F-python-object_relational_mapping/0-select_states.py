@@ -16,7 +16,7 @@ if __name__ == '__main__':
         password="",
         database="hbtn_0e_0_usa"
     )
-mycursor = mydb.cursor()
-mycursor.execute(" SELECT * FROM states order by  states.id ; ")
-for i in mycursor:
-    print(i)
+    mycursor = mydb.cursor()
+    mycursor.execute(" SELECT * FROM states order by  states.id ; ")
+    for states in mycursor.fetchall():
+        print(states)
