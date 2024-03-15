@@ -9,16 +9,10 @@ if __name__ == '__main__':
     """
     Access to the database
     """
-    mydb = MySQLdb.connect(
-        host="localhost",
-        port=3306,
-        user="root",
-        password="",
-        database="hbtn_0e_0_usa"
-    )
-    mycursor = mydb.cursor()
-    mycursor.execute("SELECT * FROM states ORDER BY id ASC")
-    for states in mycursor.fetchall():
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    c = db.cursor()
+    c.execute("SELECT * FROM states ORDER BY id ASC")
+    for states in c.fetchall():
         print(states)
-    mycursor.close()
-    mydb.close()
+    c.close()
+    db.close()
