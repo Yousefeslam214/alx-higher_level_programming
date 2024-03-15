@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 import mysql.connector
 
+import MySQLdb
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
