@@ -16,7 +16,6 @@ if __name__ == '__main__':
                 WHERE BINARY `name` = '{}'\
                     ORDER BY id ASC".format(sys.argv[4]))
     for states in c.fetchall():
-        if states[1] == sys.argv[4]:
-            print(states)
+        print(states)
     c.close()
     db.close()
