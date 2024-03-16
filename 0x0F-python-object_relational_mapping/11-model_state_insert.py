@@ -11,9 +11,8 @@ if __name__ == "__main__":
                             pool_pre_ping=True)
     Session = sessionmaker(bind=engine)
     session = Session()
-    found = False
-    StateQuery = session.query(State).filter(State.name == sys.argv[4]).first()
-    if StateQuery:
-        print("{}".format(StateQuery.id))
-    else:
-        print("Not found")
+    
+    louisiana = State(name="Louisiana")
+    session.add(louisiana)
+    session.commit()
+    print(louisiana.id)
