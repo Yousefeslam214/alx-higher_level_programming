@@ -14,4 +14,6 @@ if __name__ == "__main__":
 
     StateQuery = session.query(State).order_by(State.id)
     for state in StateQuery:
-        print("{}: {}".format(state.id, state.name))
+        if 'a' in state.name:
+            print("{}: {}".format(state.id, state.name))
+
