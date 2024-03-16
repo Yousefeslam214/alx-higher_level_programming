@@ -10,7 +10,7 @@ if __name__ == '__main__':
     Access to the database
     """
     i = 0
-    db = MySQLdb.connect(user=sys.argv[1], passwd='', db=sys.argv[3])
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
     c = db.cursor()
     c.execute("SELECT DISTINCT cities.name   FROM cities\
             INNER JOIN states ON cities.state_id = states.id\
