@@ -14,6 +14,6 @@ if __name__ == "__main__":
 
     StateQuery = session.query(State).order_by(State.id).first()
     if StateQuery is not None:
-        print("{}: {}".format(state.id, state.name))
+        print("{}: {}".format(StateQuery.id, StateQuery.name))
     else:
         print("Nothing")
