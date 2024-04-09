@@ -7,12 +7,13 @@ class Rectangle {
       this.width = w;
     }
   }
+
   // Method
-  print() {
-    for (let i = 0; i < this.height;i++) {
+  print () {
+    for (let i = 0; i < this.height; i++) {
       let x = '';
-      for (let j = 0; j < this.width;j++) {
-        x += 'X'
+      for (let j = 0; j < this.width; j++) {
+        x += 'X';
       }
       console.log(x);
     }
