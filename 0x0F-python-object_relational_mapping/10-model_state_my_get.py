@@ -17,3 +17,4 @@ if __name__ == "__main__":
         print("{}".format(StateQuery.id))
     else:
         print("Not found")
+    session.close()
