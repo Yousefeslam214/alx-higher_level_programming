@@ -24,3 +24,5 @@ if __name__ == "__main__":
             .filter(City.state_id == State.id)\
             .order_by(City.id):
         print(f"{record[1].name}: ({record[0].id}) {record[0].name}")
+
+	session.close()
