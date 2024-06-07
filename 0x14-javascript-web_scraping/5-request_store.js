@@ -9,5 +9,9 @@ request.get(url, (error, resource, body) => {
   if (error) {
     console.error(error);
   }
-  fs.writeFile(path, body);
+  fs.writeFile(path, body, (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
 });
